@@ -1,0 +1,304 @@
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  background: linear-gradient(120deg, rgba(15, 23, 42, 0.04), rgba(59, 130, 246, 0.06));
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.login-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 3rem;
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 55%);
+}
+
+.login-panel__content {
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.login-panel__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  font-size: 0.7rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+}
+
+.login-panel__title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  color: hsl(var(--foreground));
+}
+
+.login-panel__subtitle {
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 2rem;
+}
+
+.login-panel__stats {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--background));
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.login-panel__stat-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 0.35rem;
+}
+
+.login-panel__stat-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.login-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3.5rem 2.5rem;
+  box-sizing: border-box;
+}
+
+.login-card mat-card {
+  width: min(420px, 100%);
+  padding: 0.5rem 0;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+  overflow: visible;
+  background-clip: padding-box;
+}
+
+.login-field {
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+::ng-deep .login-field .mdc-text-field--outlined {
+  border-radius: 12px;
+  background: transparent;
+  box-shadow: 0 10px 18px rgba(15, 23, 42, 0.06);
+  overflow: visible;
+}
+
+::ng-deep .login-field .mat-mdc-form-field-infix,
+::ng-deep .login-field .mdc-text-field__input {
+  background: hsl(var(--background));
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+::ng-deep .login-field .mdc-notched-outline__notch {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .login-field .mdc-notched-outline__leading,
+::ng-deep .login-field .mdc-notched-outline__trailing,
+::ng-deep .login-field .mdc-notched-outline__notch {
+  border-color: hsl(var(--border));
+  border-width: 1px;
+}
+
+::ng-deep .login-field .mdc-text-field__input {
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  margin: 0;
+  width: 100%;
+  height: auto;
+  line-height: 1.2;
+  display: block;
+  background: hsl(var(--background));
+  border-radius: 8px;
+}
+
+::ng-deep .login-field .mat-mdc-form-field-infix {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+  background: hsl(var(--background));
+  border-radius: 8px;
+  display: block;
+}
+
+::ng-deep .login-field .mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .login-field .mdc-text-field--focused .mdc-notched-outline__trailing {
+  border-color: hsl(var(--ring));
+}
+
+::ng-deep .login-field .mdc-text-field--focused {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+}
+
+.login-submit {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 1.25rem;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 12px 20px rgba(59, 130, 246, 0.2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+::ng-deep .login-submit .mat-mdc-button-touch-target,
+::ng-deep .login-submit .mat-mdc-button-base {
+  height: 52px !important;
+  min-height: 52px !important;
+  padding: 0 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-sizing: border-box !important;
+}
+
+.login-submit .mat-mdc-button {
+  font-weight: 700;
+}
+
+.login-card mat-card-content {
+  padding: 1rem 1.25rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.login-card__demo-title {
+  margin: 0 0 0.75rem;
+  padding: 0.35rem 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.login-card__demo {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.login-card__demo div {
+  padding: 0.5rem 0.75rem;
+  border-radius: 10px;
+  background: hsl(var(--muted));
+}
+
+.login-field::after,
+.login-field::before,
+::ng-deep .login-field .mdc-text-field__input::before,
+::ng-deep .login-field .mdc-text-field__input::after {
+  content: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+@media (max-width: 960px) {
+  .login-panel {
+    display: none;
+  }
+
+  .login-shell {
+    background: hsl(var(--background));
+  }
+
+  .login-card {
+    padding: 2rem 1.25rem;
+  }
+}
+
+input[type="email"],
+input[type="password"],
+textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  border: none;
+  background-clip: padding-box;
+}
+
+::ng-deep .mat-mdc-form-field-wrapper,
+::ng-deep .mat-mdc-form-field {
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Text field full reset to vanilla appearance */
+::ng-deep .login-field,
+::ng-deep .login-field .mat-mdc-form-field,
+::ng-deep .login-field .mat-mdc-form-field-wrapper,
+::ng-deep .login-field .mat-mdc-form-field-infix,
+::ng-deep .login-field .mdc-notched-outline,
+::ng-deep .login-field .mdc-notched-outline__leading,
+::ng-deep .login-field .mdc-notched-outline__trailing,
+::ng-deep .login-field .mdc-notched-outline__notch,
+::ng-deep .login-field * {
+  all: unset !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+::ng-deep .login-field mat-label,
+::ng-deep .login-field .mat-mdc-form-field-label {
+  all: unset !important;
+  display: block !important;
+  margin: 0 0 0.35rem 0 !important;
+  color: inherit !important;
+  font: inherit !important;
+  line-height: normal !important;
+}
+
+::ng-deep .login-field input[matInput],
+.login-field input,
+.login-field textarea {
+  all: revert !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0.35rem 0.5rem !important;
+  font: inherit !important;
+  color: inherit !important;
+  background: #ffffff !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(0,0,0,0.25) !important;
+  outline: none !important;
+}
+
+::ng-deep .login-field input[matInput]:focus,
+.login-field input:focus,
+.login-field textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.12) !important;
+  border-color: rgba(59,130,246,0.9) !important;
+}
+
+::ng-deep .login-field::before,
+::ng-deep .login-field::after,
+::ng-deep .login-field .mdc-text-field__input::before,
+::ng-deep .login-field .mdc-text-field__input::after {
+  content: none !important;
+  display: none !important;
+  border: none !important;
+  background: transparent !important;
+}

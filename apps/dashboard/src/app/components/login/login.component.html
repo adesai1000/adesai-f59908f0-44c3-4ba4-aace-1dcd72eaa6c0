@@ -1,0 +1,62 @@
+<div class="login-shell">
+  <div class="login-panel">
+    <div class="login-panel__content">
+      <h1 class="login-panel__title">Welcome to Task Management</h1>
+      <p class="login-panel__subtitle">
+        Plan, prioritize, and finish your tasks!
+      </p>
+      <div class="login-panel__stats">
+        <div>
+          <p class="login-panel__stat-label">Organizations</p>
+          <p class="login-panel__stat-value">3 Roles</p>
+        </div>
+        <div>
+          <p class="login-panel__stat-label">Roles</p>
+          <p class="login-panel__stat-value">Owner · Admin · Viewer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="login-card">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Sign in</mat-card-title>
+        <mat-card-subtitle>Use your team credentials to continue</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-4">
+          <mat-form-field appearance="outline" class="w-full login-field">
+            <mat-label>Email address</mat-label>
+            <input matInput type="email" formControlName="email" />
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="w-full login-field">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" formControlName="password" />
+          </mat-form-field>
+
+
+          <div *ngIf="errorMessage"
+            class="rounded-md border border-destructive/30 bg-destructive/10 p-3 text-sm text-destructive">
+            {{ errorMessage }}
+          </div>
+
+          <button mat-raised-button color="primary" class="w-full login-submit" type="submit"
+            [disabled]="loginForm.invalid">
+            Sign in
+          </button>
+        </form>
+      </mat-card-content>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <p class="login-card__demo-title text-muted-foreground">Demo credentials</p>
+        <div class="login-card__demo">
+          <div>owner&#64;acme.com / owner123</div>
+          <div>admin&#64;acme.com / admin123</div>
+          <div>viewer&#64;acme.com / viewer123</div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

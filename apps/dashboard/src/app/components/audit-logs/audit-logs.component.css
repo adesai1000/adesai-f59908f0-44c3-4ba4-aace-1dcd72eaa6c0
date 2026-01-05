@@ -1,0 +1,99 @@
+.dashboard-container {
+  height: 100vh;
+  background: hsl(var(--muted));
+}
+
+.dashboard-sidenav {
+  width: 260px;
+  background: hsl(var(--background));
+  border-right: 1px solid hsl(var(--border));
+}
+
+.sidenav-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 64px;
+  padding: 0 20px;
+}
+
+.sidenav-logo {
+  height: 36px;
+  width: 36px;
+  border-radius: 8px;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--muted));
+  color: hsl(var(--foreground));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.sidenav-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: hsl(var(--muted-foreground));
+}
+
+.sidenav-title span:last-child {
+  font-size: 13px;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  color: hsl(var(--foreground));
+  font-weight: 600;
+}
+
+.sidenav-footer {
+  padding: 16px 20px;
+  border-top: 1px solid hsl(var(--border));
+  font-size: 12px;
+  color: hsl(var(--muted-foreground));
+}
+
+.sidenav-footer span {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: hsl(var(--foreground));
+}
+
+.dashboard-toolbar {
+  background: hsl(var(--background));
+  border-bottom: 1px solid hsl(var(--border));
+}
+
+.dashboard-content {
+  background: hsl(var(--muted) / 0.4);
+  min-height: calc(100vh - 64px);
+}
+
+.nav-active {
+  background: hsl(var(--muted));
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #000;
+}
+
+.audit-table th,
+.audit-table td {
+  border: 1px solid #000;
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+.audit-table thead th {
+  font-weight: 600;
+  background-color: #f5f5f5;
+}

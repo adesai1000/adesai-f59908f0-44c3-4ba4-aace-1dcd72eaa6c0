@@ -1,0 +1,86 @@
+<mat-sidenav-container class="dashboard-container">
+  <mat-sidenav mode="side" opened class="dashboard-sidenav">
+    <div class="sidenav-header">
+      <div class="sidenav-logo">TM</div>
+      <div class="sidenav-title">
+        <span>Workspace</span>
+        <span>Task Management</span>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard">Dashboard</a>
+      <a
+        *ngIf="canViewAuditLogs()"
+        mat-list-item
+        class="nav-active"
+        routerLink="/audit-logs"
+      >
+        Audit Logs
+      </a>
+      <a mat-list-item (click)="logout()">Logout</a>
+    </mat-nav-list>
+    <div class="sidenav-footer">
+      Signed in as
+      <span>{{ currentUser?.firstName }} {{ currentUser?.lastName }}</span>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="dashboard-content">
+    <mat-toolbar class="dashboard-toolbar">
+      <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4">
+        <div>
+          <h2 class="text-lg font-semibold text-foreground">Audit logs</h2>
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <main class="mx-auto w-full max-w-7xl px-4 py-8">
+      <mat-card>
+        <mat-card-content>
+          <div *ngIf="loading" class="text-sm text-muted-foreground">
+            Loading audit logs...
+          </div>
+          <div *ngIf="errorMessage" class="text-sm text-destructive">
+            {{ errorMessage }}
+          </div>
+          <div *ngIf="!loading && !errorMessage" class="overflow-x-auto">
+            <table class="audit-table text-left text-sm">
+              <thead class="text-xs uppercase text-muted-foreground">
+                <tr>
+                  <th class="border border-black py-3 pr-4 pl-4">Time</th>
+                  <th class="border border-black py-3 pr-4">User</th>
+                  <th class="border border-black py-3 pr-4">Action</th>
+                  <th class="border border-black py-3 pr-4">Resource</th>
+                  <th class="border border-black py-3 pr-4">Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let log of logs">
+                  <td class="border border-black py-3 pr-4 pl-4 whitespace-nowrap">
+                    {{ log.createdAt | date: 'short' }}
+                  </td>
+                  <td class="border border-black py-3 pr-4">
+                    {{ log.user?.email || log.userId }}
+                  </td>
+                  <td class="border border-black py-3 pr-4">{{ log.action }}</td>
+                  <td class="border border-black py-3 pr-4">
+                    {{ log.resource }}{{ log.resourceId ? ' #' + log.resourceId : '' }}
+                  </td>
+                  <td class="border border-black py-3 pr-4 text-muted-foreground">
+                    {{ log.details || '-' }}
+                  </td>
+                </tr>
+                <tr *ngIf="logs.length === 0">
+                  <td class="border border-black py-4 pl-4 text-muted-foreground" colspan="5">
+                    No audit entries yet.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

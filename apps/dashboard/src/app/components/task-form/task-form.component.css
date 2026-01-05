@@ -1,0 +1,10 @@
+.task-form .field {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 640px) {
+  .task-form .field {
+    margin-bottom: 1.25rem;
+  }
+}
