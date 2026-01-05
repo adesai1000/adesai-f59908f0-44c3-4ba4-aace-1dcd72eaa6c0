@@ -67,18 +67,6 @@
   "fileMap": {
     "nonProjectFiles": [
       {
-        "file": "tsconfig.base.json",
-        "hash": "17024620441776829501"
-      },
-      {
-        "file": "package.json",
-        "hash": "4292845176648352861"
-      },
-      {
-        "file": ".eslintrc.json",
-        "hash": "2079169466193702664"
-      },
-      {
         "file": "jest.preset.js",
         "hash": "11501075071613313907"
       },
@@ -87,8 +75,20 @@
         "hash": "4466818760224473091"
       },
       {
+        "file": "tsconfig.base.json",
+        "hash": "17024620441776829501"
+      },
+      {
         "file": "package-lock.json",
         "hash": "4265093735398940876"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "2079169466193702664"
+      },
+      {
+        "file": "package.json",
+        "hash": "4292845176648352861"
       },
       {
         "file": ".gitignore",
@@ -97,6 +97,10 @@
       {
         "file": "README.md",
         "hash": "10257585578113688909"
+      },
+      {
+        "file": ".gitattributes",
+        "hash": "13194702717607086212"
       }
     ],
     "projectFileMap": {

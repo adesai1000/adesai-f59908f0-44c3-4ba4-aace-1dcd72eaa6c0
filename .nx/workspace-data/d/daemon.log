@@ -4791,3 +4791,8 @@
 [NX Daemon Server] - 2026-01-05T19:36:54.595Z - [REQUEST]: .gitattributes
 [NX Daemon Server] - 2026-01-05T19:36:54.595Z - [REQUEST]: 
 [NX Daemon Server] - 2026-01-05T19:36:54.601Z - Time taken for 'hash changed files from watcher' 3.1062909960746765ms
+[NX Daemon Server] - 2026-01-05T19:36:54.630Z - Time taken for 'build-project-configs' 25.775708004832268ms
+[NX Daemon Server] - 2026-01-05T19:36:54.651Z - [SYNC]: collect registered sync generators
+[NX Daemon Server] - 2026-01-05T19:36:54.651Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX Daemon Server] - 2026-01-05T19:36:54.651Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX Daemon Server] - 2026-01-05T19:36:54.652Z - Time taken for 'total execution time for createProjectGraph()' 24.157249994575977ms
